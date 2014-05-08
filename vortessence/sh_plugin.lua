@@ -1,11 +1,8 @@
 PLUGIN.name = "Vortessence"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Vortessence"
 
-local words = {"ahglah", "ahhhr", "alla", "allu", "baah", "beh", "bim", "buu", "chaa", "chackt", "churr", "dan", "darr", "dee", "eeya", "ge", "ga", "gaharra",
-"gaka", "galih", "gallalam", "gerr", "gog", "gram", "gu", "gunn", "gurrah", "ha", "hallam", "harra", "hen", "hi", "jah", "jurr", "kallah", "keh", "kih",
-"kurr", "lalli", "llam", "lih", "ley", "lillmah", "lurh", "mah", "min", "nach", "nahh", "neh", "nohaa", "nuy", "raa", "ruhh", "rum", "saa", "seh", "sennah",
-"shaa", "shuu", "surr", "taa", "tan", "tsah", "turr", "uhn", "ula", "vahh", "vech", "veh", "vin", "voo", "vouch", "vurr", "xkah", "xih", "zurr"}
+nut.util.Include("sh_config.lua")
 
 nut.chat.Register("vortessence", {
 	canHear = nut.config.chatRange,
@@ -14,7 +11,7 @@ nut.chat.Register("vortessence", {
 		local split = string.Split(text, " ")
 
 		for k, v in pairs(split) do 
-			local string = table.Random(words)
+			local string = table.Random(nut.config.vortessenceWords)
 			table.insert(vort, string)
 		end
 

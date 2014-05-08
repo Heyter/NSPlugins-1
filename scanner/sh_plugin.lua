@@ -1,5 +1,5 @@
 PLUGIN.name = "Civil Clearance Level"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds a CCL (Civil Clearance Level) to CID cards. Also adds a scanner entity that will open doors if your CID cards CCL is high enough."
 
 nut.util.Include("sh_config.lua")

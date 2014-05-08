@@ -1,5 +1,5 @@
 PLUGIN.name = "Breaching"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds the ability to breach doors by shooting the doorhandle."
 
 function PLUGIN:EntityTakeDamage(entity, damageInfo)

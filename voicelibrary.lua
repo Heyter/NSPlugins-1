@@ -1,5 +1,5 @@
 PLUGIN.name = "Better Voice Library"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds \"missing\" voices to the voice library."
 
 nut.voice.buffer = {}

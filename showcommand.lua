@@ -1,5 +1,5 @@
 PLUGIN.name = "Show Commands"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Shows commands when typing them in the chat."
 
 if (CLIENT) then

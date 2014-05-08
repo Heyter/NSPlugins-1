@@ -1,5 +1,5 @@
 PLUGIN.name = "Miscellaneous Commands"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds commands."
 
 nut.command.Register({

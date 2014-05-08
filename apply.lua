@@ -1,5 +1,5 @@
 PLUGIN.name = "Civil Clearance Level"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Edits CID cards to contain a CCL (Civil Clearance Level). Also adds a scanner entity that will open doors if your CCL is high enough."
 
 function PLUGIN:SchemaInitialized()

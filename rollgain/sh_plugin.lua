@@ -1,36 +1,8 @@
 PLUGIN.name = "Roll Gain"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Boosts your rolls depending on your faction, class and equiped weapon."
 
-local GAINS_CP = {
-	{"05",5},
-	{"04",5},
-	{"03",10},
-	{"02",20},
-	{"01",10},
-	{"OfC",15},
-	{"EpU",20},
-	{"DvL",25},
-	{"CmD",25},
-	{"SeC",25}
-}
-
-local GAINS_OW = {
-	{"OWS",25},
-	{"SGS",30},
-	{"EOW",35}
-}
-
-local GAINS_WEP = {
-	{"nut_stunstick",5},
-	{"weapon_crowbar",10},
-	{"weapon_pistol",15},
-	{"weapon_357",20},
-	{"weapon_smg1",25},
-	{"weapon_shotgun",30},
-	{"weapon_crossbow",30},
-	{"weapon_ar2",35}
-}
+nut.util.Include("sh_config.lua")
 
 nut.command.Register({
 	onRun = function(client, arguments)
@@ -41,7 +13,7 @@ nut.command.Register({
 
 		-- Checks to see if the client faction is MPF, if it is then move onto the next line.
 		if (faction == FACTION_CP) then
-			for k,v in pairs(GAINS_CP) do
+			for k,v in pairs(nut.config.CPGains ) do
 				if (client:IsCombineRank(v[1])) then
 					roll_max = roll_max + v[2]
 					break
@@ -51,7 +23,7 @@ nut.command.Register({
 
 		-- If clients faction is OTA then give him one of these gains.
 		if (faction == FACTION_OW) then
-			for k,v in pairs(GAINS_OW) do
+			for k,v in pairs(nut.config.OWGains) do
 				if (client:IsCombineRank(v[1])) then
 					roll_max = roll_max + v[2]
 					break
@@ -65,7 +37,7 @@ nut.command.Register({
 		end
 
 		-- This should be pretty self explanatory if you followed the rest. This adds a gain based on the weapon EQUIPPED.
-		for k,v in pairs(GAINS_WEP) do
+		for k,v in pairs(nut.config.weaponGains) do
 			if (weapon == v[1]) then
 				gain = gain + v[2]
 				break

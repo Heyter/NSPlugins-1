@@ -1,5 +1,5 @@
 PLUGIN.name = "Drop Equiped"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Makes you drop your equipped items when you die."
 
 function PLUGIN:PlayerDeath(vic, inf, att)

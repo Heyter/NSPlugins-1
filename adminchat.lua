@@ -1,5 +1,5 @@
 PLUGIN.name = "Admin chat"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds an admin chat."
 
 local ICON_WRENCH = Material("icon16/wrench.png")

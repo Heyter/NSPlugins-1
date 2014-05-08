@@ -1,5 +1,5 @@
 PLUGIN.name = "Writables"
-PLUGIN.author = "Blank"
+PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds writable notes."
 
 nut.util.Include("cl_note.lua")
