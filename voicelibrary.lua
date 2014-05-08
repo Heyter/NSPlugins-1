@@ -1,6 +1,6 @@
 PLUGIN.name = "Better Voice Library"
 PLUGIN.author = "Qemist"
-PLUGIN.desc = "Adds \"missing\" voices to the voice library."
+PLUGIN.desc = "Changes the voice library to match the one of the clockwork HL2RP schema."
 
 nut.voice.buffer = {}
 
