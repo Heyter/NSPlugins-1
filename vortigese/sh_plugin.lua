@@ -1,6 +1,6 @@
-PLUGIN.name = "Vortessence"
+PLUGIN.name = "Vortigese"
 PLUGIN.author = "Qemist"
-PLUGIN.desc = "Vortessence"
+PLUGIN.desc = "Vortigese"
 
 nut.util.Include("sh_config.lua")
 
@@ -11,7 +11,7 @@ nut.chat.Register("vortessence", {
 		local split = string.Split(text, " ")
 
 		for k, v in pairs(split) do 
-			local string = table.Random(nut.config.vortessenceWords)
+			local string = table.Random(nut.config.vortigeseWords)
 			table.insert(vort, string)
 		end
 
@@ -21,12 +21,12 @@ nut.chat.Register("vortessence", {
 	end,
 	canSay = function(speaker)
 		if (speaker:Team() != FACTION_VORT) then
-			nut.util.Notify("You don't know Vortessence!", speaker)
+			nut.util.Notify("You don't know Vortigese!", speaker)
 
 			return false
 		end
 
 		return true
 	end,
-	prefix = {"/v", "/vortessence"}
+	prefix = {"/v", "/vortigese"}
 })
