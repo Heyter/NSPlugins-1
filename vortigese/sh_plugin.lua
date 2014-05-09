@@ -4,7 +4,7 @@ PLUGIN.desc = "Vortigese"
 
 nut.util.Include("sh_config.lua")
 
-nut.chat.Register("vortessence", {
+nut.chat.Register("vortigese", {
 	canHear = nut.config.chatRange,
 	onChat = function(speaker, text)
 		local vort = {}
