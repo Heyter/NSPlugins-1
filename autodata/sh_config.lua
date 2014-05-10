@@ -1,3 +1,5 @@
+-- %name% willl become the characters name. 
+-- %digits% will become the either the characters citizen id (citizen) or unit id (combine).
 nut.config.autoData = {
 	[FACTION_CP] = [[
 	----------------------
