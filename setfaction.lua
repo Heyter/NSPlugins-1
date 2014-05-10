@@ -1,4 +1,4 @@
-PLUGIN.name = "Set faction"
+PLUGIN.name = "Set Faction"
 PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds a command to set a characters faction."
     

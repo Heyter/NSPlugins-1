@@ -1,4 +1,4 @@
-PLUGIN.name = "Force character"
+PLUGIN.name = "Force Character"
 PLUGIN.author = "Qemist"
 PLUGIN.desc = "Adds a command to force onto their other characters."
 

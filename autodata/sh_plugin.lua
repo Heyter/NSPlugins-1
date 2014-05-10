@@ -1,5 +1,5 @@
 local PLUGIN = PLUGIN
-PLUGIN.name = "Auto data"
+PLUGIN.name = "Auto Data"
 PLUGIN.author = "Qemist"
 PLUGIN.desc = "Automaticly sets a characters combine data if set in the config file. Also adds a command to reset a characters combine data to its default."
 
