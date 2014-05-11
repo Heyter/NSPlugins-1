@@ -1,6 +1,6 @@
 PLUGIN.name = "Show Commands"
 PLUGIN.author = "Qemist"
-PLUGIN.desc = "Shows commands when typing them in the chat."
+PLUGIN.desc = "Shows commands next the chatbox as you are typing them."
 
 if (CLIENT) then
 	function PLUGIN:ChatTextChanged(text)
@@ -15,44 +15,20 @@ if (CLIENT) then
 		local Command = string.lower(Explode[1])
 
 		for k, v in pairs(nut.command.buffer) do
-			if (string.sub(text, 1, 1) == "/") then 
-				if (string.sub(string.lower(k), 1, string.len(Command)) == Command) then
-			 		if (string.len(Command) > 0) then
-			 			local commandTable = nut.command.buffer[k]
+			if (string.sub(string.lower(k), 1, string.len(Command)) == Command) then
+		 		if (string.len(Command) > 0) then
+		 			local commandTable = v
 
-			 			if (commandTable) then
-							if (commandTable.onRun) then
-								if (commandTable.hasPermission) then
-									if (commandTable.hasPermission(LocalPlayer()) == false) then
-										return
-									end
-								elseif (commandTable.superAdminOnly) then
-									if (!LocalPlayer():IsSuperAdmin()) then
-										return
-									end
-								elseif (commandTable.adminOnly) then
-									if (!LocalPlayer():IsAdmin()) then
-										return
-									end
-								end
-
-								if (!commandTable.allowDead and !LocalPlayer():Alive()) then
-									return
-								end
-							end
+		 			if (commandTable) then
+						if (commandTable.onRun) then
+							Options[k] = v.syntax
 						end
-
-						Options[k] = v.syntax
-					end
+					end	
 				end
 			end
 		end
 
 		table.sort(Options)
-	end
-
-	function PLUGIN:OnChatTab(text)
-		print("TAB!!!")
 	end
 
 	function PLUGIN:FinishChat()
