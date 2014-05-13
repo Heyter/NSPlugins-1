@@ -20,14 +20,6 @@ nut.config.quiz.questions = {
 		correct = 1
 	},
 	[3] = {
-		question = "You find a gun along with a rebel uniform. What do you do?",
-		options = {
-			[1] = "Pick them both up and become a rebel",
-			[2] = "Report their location to the CP"
-		},
-		correct = 2
-	},
-	[4] = {
 		question = "Can you type properly, using capital letters and full-stops?",
 		options = {
 			[1] = "yes i can",
