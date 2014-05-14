@@ -37,4 +37,8 @@ nut.config.quiz.menuWidth = 0.5
 nut.config.quiz.menuHeight = 0.75
 -- The kick message a player should recieve if they have any incorrect answers.
 nut.config.quiz.kickMessage = "One or more of your answers were incorrect, you may rejoin to try again"
+-- Whether or not the passedQuiz column should attempt to to added to the player table (MySQL).
+-- Have this turned on the first time you use the plugin. When the comlumn has been added you can then
+-- turn it off to avoid getting a MySQL error on startup and reloads
+nut.config.quiz.addColumn = true
 
