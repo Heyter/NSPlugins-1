@@ -48,6 +48,8 @@ netstream.Hook("nut_QuizResult", function(client, result)
 
 		nut.db.UpdateTable(condition, data, nut.config.dbPlyTable)
 
+		self.players[steamid] = true
+
 		netstream.Start(client, "nut_CharMenu", true)
 	else
 		client:Kick(nut.config.quiz.kickMessage)
