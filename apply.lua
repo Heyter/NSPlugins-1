@@ -14,7 +14,7 @@ function PLUGIN:SchemaInitialized()
 		run = function(itemTable, client, data, entity, index)
 			client:ConCommand("say "..(data.Name or "no one")..", "..(data.Digits or "00000"))
 
-			return false
+			return true
 		end
 	}
 end
