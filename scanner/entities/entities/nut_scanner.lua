@@ -26,6 +26,7 @@ function ENT:SetupDataTables()
 	self:NetworkVar("Int", 1, "Clearance")
 	self:NetworkVar("String", 1, "Text")
 	self:NetworkVar("Bool", 0, "Disabled")
+	self:NetworkVar("Bool", 1, "Toggle")
 end
 
 function ENT:SpawnFunction(client, trace)
@@ -156,7 +157,11 @@ else
 			return
 		end
 
-		if (activator:Team() == FACTION_CITIZEN) then
+		if (activator:IsCombine()) then
+			self:SetDisabled(!self:GetDisabled())
+			self:EmitSound(self:GetDisabled() and "buttons/combine_button1.wav" or "buttons/combine_button2.wav")
+			self.nextUse = CurTime() + 1
+		else
 			if (!self.canUse or self:GetDisabled()) then
 				return
 			end
@@ -193,10 +198,6 @@ else
 					end)
 				end
 			end)
-		elseif (activator:IsCombine()) then
-			self:SetDisabled(!self:GetDisabled())
-			self:EmitSound(self:GetDisabled() and "buttons/combine_button1.wav" or "buttons/combine_button2.wav")
-			self.nextUse = CurTime() + 1
 		end
 	end
 end
